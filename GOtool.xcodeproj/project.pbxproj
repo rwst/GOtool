@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76FAC0486AB0100D96B5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76FB00486AB0100D96B5E /* makegoslim.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6A0FF2C0290799A04C91782 /* makegoslim.1 */; };
+		F250440F12B4C67400077A1E /* GOAcollection.m in Sources */ = {isa = PBXBuildFile; fileRef = F250440E12B4C67400077A1E /* GOAcollection.m */; };
+		F296C48212ABECC00087A749 /* GeneOntology.m in Sources */ = {isa = PBXBuildFile; fileRef = F296C48112ABECC00087A749 /* GeneOntology.m */; };
+		F296C48512ABF4F70087A749 /* GOparser.m in Sources */ = {isa = PBXBuildFile; fileRef = F296C48412ABF4F70087A749 /* GOparser.m */; };
+		F296C49512ABFBA90087A749 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F296C49412ABFBA80087A749 /* Foundation.framework */; };
+		F2A8886612AEA65400A9F814 /* GOterm.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A8886512AEA65400A9F814 /* GOterm.m */; };
+		F2A88A1212B3FDFA00A9F814 /* GOAparser.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A88A1112B3FDFA00A9F814 /* GOAparser.m */; };
+		F2A88A1512B3FEAC00A9F814 /* GOannotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A88A1412B3FEAC00A9F814 /* GOannotation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76FB00486AB0100D96B5E /* makegoslim.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8DD76FB20486AB0100D96B5E /* GOtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GOtool; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A0FF2C0290799A04C91782 /* makegoslim.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = makegoslim.1; sourceTree = "<group>"; };
+		F250440D12B4C67400077A1E /* GOAcollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOAcollection.h; sourceTree = "<group>"; };
+		F250440E12B4C67400077A1E /* GOAcollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOAcollection.m; sourceTree = "<group>"; };
+		F250446812B7DB5100077A1E /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F296C48012ABECC00087A749 /* GeneOntology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneOntology.h; sourceTree = "<group>"; };
+		F296C48112ABECC00087A749 /* GeneOntology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneOntology.m; sourceTree = "<group>"; };
+		F296C48312ABF4F70087A749 /* GOparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOparser.h; sourceTree = "<group>"; };
+		F296C48412ABF4F70087A749 /* GOparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOparser.m; sourceTree = "<group>"; };
+		F296C49412ABFBA80087A749 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F296C49A12AC04000087A749 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F2A8886412AEA65400A9F814 /* GOterm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOterm.h; sourceTree = "<group>"; };
+		F2A8886512AEA65400A9F814 /* GOterm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOterm.m; sourceTree = "<group>"; };
+		F2A8890312B14CA600A9F814 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		F2A88A1012B3FDFA00A9F814 /* GOAparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOAparser.h; sourceTree = "<group>"; };
+		F2A88A1112B3FDFA00A9F814 /* GOAparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOAparser.m; sourceTree = "<group>"; };
+		F2A88A1312B3FEAC00A9F814 /* GOannotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOannotation.h; sourceTree = "<group>"; };
+		F2A88A1412B3FEAC00A9F814 /* GOannotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOannotation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F296C49512ABFBA90087A749 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* GOtool */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				F296C49412ABFBA80087A749 /* Foundation.framework */,
+			);
+			name = GOtool;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07 /* main.m */,
+				F296C48012ABECC00087A749 /* GeneOntology.h */,
+				F296C48112ABECC00087A749 /* GeneOntology.m */,
+				F296C48312ABF4F70087A749 /* GOparser.h */,
+				F296C48412ABF4F70087A749 /* GOparser.m */,
+				F2A8886412AEA65400A9F814 /* GOterm.h */,
+				F2A8886512AEA65400A9F814 /* GOterm.m */,
+				F2A88A1012B3FDFA00A9F814 /* GOAparser.h */,
+				F2A88A1112B3FDFA00A9F814 /* GOAparser.m */,
+				F2A88A1312B3FEAC00A9F814 /* GOannotation.h */,
+				F2A88A1412B3FEAC00A9F814 /* GOannotation.m */,
+				F250440D12B4C67400077A1E /* GOAcollection.h */,
+				F250440E12B4C67400077A1E /* GOAcollection.m */,
+				F250446812B7DB5100077A1E /* version.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* GOtool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0FF2C0290799A04C91782 /* makegoslim.1 */,
+				F296C49A12AC04000087A749 /* README.txt */,
+				F2A8890312B14CA600A9F814 /* TODO */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* makegoslim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "makegoslim" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = makegoslim;
+			productInstallPath = "$(HOME)/bin";
+			productName = GOtool;
+			productReference = 8DD76FB20486AB0100D96B5E /* GOtool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "GOtool" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* GOtool */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* makegoslim */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76FAC0486AB0100D96B5E /* main.m in Sources */,
+				F296C48212ABECC00087A749 /* GeneOntology.m in Sources */,
+				F296C48512ABF4F70087A749 /* GOparser.m in Sources */,
+				F2A8886612AEA65400A9F814 /* GOterm.m in Sources */,
+				F2A88A1212B3FDFA00A9F814 /* GOAparser.m in Sources */,
+				F2A88A1512B3FEAC00A9F814 /* GOannotation.m in Sources */,
+				F250440F12B4C67400077A1E /* GOAcollection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928608733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = GOtool;
+			};
+			name = Debug;
+		};
+		1DEB928708733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = GOtool;
+			};
+			name = Release;
+		};
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928508733DD80010E9CD /* Build configuration list for PBXNativeTarget "makegoslim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928608733DD80010E9CD /* Debug */,
+				1DEB928708733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "GOtool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

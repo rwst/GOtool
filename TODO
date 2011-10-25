@@ -1,0 +1,6 @@
+* Exception handing
+* GOAannotation: change getter implementation such that objs are allocated
+  only once. Even better, create factories for them. (memory footprint, also
+  speed)
+* refactor: let all use @property (GOterm, GOannotation)
+* bug: alt_ids are output twice in simple output
