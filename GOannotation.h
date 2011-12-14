@@ -46,5 +46,7 @@ typedef enum { GOAQ_NONE=0, GOAQ_NOT, GOAQ_COLOCALIZES, GOAQ_CONTRIBUTES } GOA_q
 //-(NSString *)getExtension;
 //-(NSString *)getProductForm;
 
+@property(readonly) char* buffer;
+@property(readonly) int* offsets;
 
 @end
