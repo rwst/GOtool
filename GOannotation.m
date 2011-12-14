@@ -11,6 +11,8 @@
 
 @implementation GOannotation
 
+@synthesize buffer, offsets;
+
 -(void)copyBuf: (const char*) buf withLength: (int) len
 {
 	buffer = malloc((len+1)*sizeof(char));
@@ -35,7 +37,6 @@
 
 -(NSString *)getDBObjectID
 {
-	buffer[offsets[GOAF_DBOBJID]+10] = '\0';
 	return [[NSString alloc] initWithCString:buffer+offsets[GOAF_DBOBJID]
 									encoding:NSASCIIStringEncoding];
 }
