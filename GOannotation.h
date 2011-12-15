@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NCOLUMNS 17 // GAF 2.0 has 17 columns
+#define NCOLUMNS 15 // GAF 2.0 has 17 columns
 
 enum GOA_field_t {
 	GOAF_DB=0, GOAF_DBOBJID, GOAF_DBOBJSYMBOL, GOAF_QUALIFIER, GOAF_GOID,
@@ -22,7 +22,7 @@ typedef enum { GOAQ_NONE=0, GOAQ_NOT, GOAQ_COLOCALIZES, GOAQ_CONTRIBUTES } GOA_q
 @interface GOannotation : NSObject {
 	char *buffer;
 	int *offsets;
-	
+	int length;
 }
 
 -(void)copyBuf: (const char*) buf withLength: (int) len;
@@ -48,5 +48,6 @@ typedef enum { GOAQ_NONE=0, GOAQ_NOT, GOAQ_COLOCALIZES, GOAQ_CONTRIBUTES } GOA_q
 
 @property(readonly) char* buffer;
 @property(readonly) int* offsets;
+@property(readonly) int length;
 
 @end

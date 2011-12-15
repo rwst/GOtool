@@ -11,20 +11,20 @@
 
 @implementation GOannotation
 
-@synthesize buffer, offsets;
+@synthesize buffer, offsets, length;
 
 -(void)copyBuf: (const char*) buf withLength: (int) len
 {
 	buffer = malloc((len+1)*sizeof(char));
 	memcpy (buffer, buf, len);
-	buffer[len-1] = '\0';
+	buffer[len] = '\0';
+	length = len;
 }
 
 -(void)setOffsets: (int*)offs
 {
 	offsets = malloc(NCOLUMNS*sizeof(int));
 	memcpy (offsets, offs, NCOLUMNS*sizeof(int));
-	*(buffer+offsets[GOAF_GOID]+10) = '\0';
 }
 
 -(void)release

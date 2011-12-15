@@ -52,6 +52,7 @@
 			*p++ = '\0';
 			++tabcount;
 		}
+		
 		if (p-buf >= BUFLEN)
 			[NSException raise:@"ParserException" format:@"Not enough tabs in buffer: %s!", buf];
 		goa = [GOannotation alloc];

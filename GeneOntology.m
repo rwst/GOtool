@@ -315,7 +315,8 @@ static inline int count_uniqueobids (NSArray* a)
 				{ found_f = YES; break; }
 			}
 			if (!found_f) { /* output inferred annotation */
-				memcpy (buf, [goa buffer], [goa offsets][GOAF_DATE]);
+				memcpy (buf, [goa buffer], [goa length]);
+				buf[[goa length]] = '\0';
 				GOterm *term = cc;
 				NSString *id = [term idstr];
 				strncpy (buf + [goa offsets][GOAF_GOID] + 3,
@@ -339,12 +340,10 @@ static inline int count_uniqueobids (NSArray* a)
 				time_t t = time(NULL);
 				int offs = [goa offsets][GOAF_DATE];
 				strftime(buf+offs, 8, "%Y%m%d", localtime(&t));
-				buf[offs+8] = '\0';
 				
 				for (int n=1; n<NCOLUMNS; n++)
 					if ([goa offsets][n] > 0) 
 						buf[[goa offsets][n]-1] = '\t';
-				buf[offs+8] = '\0';
 				printf("%s\n", buf);
 			}
 		}
