@@ -239,6 +239,8 @@ static inline int count_uniqueobids (NSArray* a)
 }
 
 #define BUFLEN 4096
+NSString *dummy;
+NSMutableDictionary* output_ht;
 
 - (void) infer_from: (NSString*) filename
 {
@@ -248,6 +250,8 @@ static inline int count_uniqueobids (NSArray* a)
 	long linecount = 0;
 	GOterm *pre = nil;
 	NSMutableArray* cset = nil;
+	dummy = [(NSString*)[NSString alloc] init];
+	output_ht = [NSMutableDictionary dictionary];
 	
 	strcpy (pathstr, [filename UTF8String]);
 	printf ("Trying to read %s\n", pathstr);
@@ -344,11 +348,16 @@ static inline int count_uniqueobids (NSArray* a)
 				for (int n=1; n<NCOLUMNS; n++)
 					if ([goa offsets][n] > 0) 
 						buf[[goa offsets][n]-1] = '\t';
-				printf("%s\n", buf);
+				
+				NSString *key = [[id stringByAppendingString:objid] stringByAppendingString:refs];
+				if ([output_ht objectForKey: key] == nil)
+				{
+					[output_ht setObject: dummy forKey:key];
+					printf("%s\n", buf);
+				}
 			}
 		}
 	}
 }
-
 
 @end
