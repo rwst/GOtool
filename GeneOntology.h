@@ -29,6 +29,7 @@
 - (void) analyze: (NSString*) options;
 - (void) anaf_topdown_from: (NSString*) top withDB: (NSMutableDictionary*) allf;
 - (void) anap_topdown_from: (NSString*) top withDB: (NSMutableDictionary*) allf;
-
+- (void) infer_from: (NSString*) options;
+- (void) do_infer_with: (GOterm*) pre concl: (NSArray*) conclusions;
 
 @end

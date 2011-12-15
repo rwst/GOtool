@@ -12,7 +12,7 @@ void usage();
 int main (int argc, char* const* argv) {
 
 	BOOL count_f = NO, leaves_f = NO, tab_f = NO, ana_f = NO;
-	char *aspects = NULL, *analyze_opts = NULL;
+	char *aspects = NULL, *analyze_opts = NULL, *infer_filename = NULL;
 	int ch;
 	
 	/* options descriptor */
@@ -22,10 +22,11 @@ int main (int argc, char* const* argv) {
 		{ "tab-hierarchy", no_argument,    NULL,           't' },
 		{ "aspects", optional_argument,    NULL,           '3' },
 		{ "analyze", optional_argument,    NULL,           'y' },
-		{ NULL,         0,                      NULL,           0 }
+		{ "infer-from", required_argument, NULL,           'i' },
+		{ NULL,         0,                   NULL,           0 }
 	};
 	
-	while ((ch = getopt_long(argc, argv, "clty:3:", longopts, NULL)) != -1)
+	while ((ch = getopt_long(argc, argv, "clty:3:i:", longopts, NULL)) != -1)
 	{
 		switch (ch)
 		{
@@ -46,6 +47,10 @@ int main (int argc, char* const* argv) {
 			case '3':
 				aspects = optarg;
 				break;
+			case 'i':
+				infer_filename = optarg;
+				break;
+
 			default:
 				usage();
 		}
@@ -88,6 +93,11 @@ int main (int argc, char* const* argv) {
 	{
 		[g analyze: (analyze_opts==NULL)?nil:[[NSString alloc] initWithCString:analyze_opts
 											 encoding:NSASCIIStringEncoding]];
+		return 0;
+	}
+	if (infer_filename != NULL) {
+		[g infer_from: [[NSString alloc] initWithCString:infer_filename
+												encoding:NSASCIIStringEncoding]];
 		return 0;
 	}
 	[g outputSlimAspects: (aspects==NULL)?nil:[[NSString alloc] initWithCString:aspects
