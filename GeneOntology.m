@@ -274,7 +274,7 @@ NSMutableDictionary* output_ht;
 															encoding:NSASCIIStringEncoding]];
 		if (term == nil)
 			[NSException raise:@"TermException" format:@"Could not get term with id '%s'!",
-			 ptr+3];
+			 ptr];
 		char *ptr1 = ptr+8;
 		while (*ptr1 && isspace(*ptr1) ) ++ptr1;
 		if (![[[NSString alloc] initWithCString:ptr1 
@@ -282,6 +282,7 @@ NSMutableDictionary* output_ht;
 			[NSException raise:@"ParserException" format:@"Given name does not match that in GO: %s!", ptr1];			
 		}
 		if (ptr == buf) { /* new rule block */
+			if (cset == nil) --linecount;
 			if (pre != nil)
 				[self do_infer_with: pre concl: cset];
 			pre = term;
@@ -295,13 +296,14 @@ NSMutableDictionary* output_ht;
 	}
 	if (pre != nil)
 		[self do_infer_with: pre concl: cset];
-	fprintf(stderr, "Applied %ld rule blocks\n", linecount);
+	fprintf(stderr, "Applied %ld rule blocks\n", --linecount);
 }
 
 - (void) do_infer_with: (GOterm*) pre concl: (NSArray*) conclusions
 {
 	if (conclusions == nil) {
-		[NSException raise:@"ParserException" format:@"Conclusions is nil!"];
+//		[NSException raise:@"ParserException" format:@"Conclusions is nil!"];
+		return;
 		}
 	char buf[BUFLEN];
 	for (GOannotation* goa in [pre ass_objs])
@@ -353,7 +355,7 @@ NSMutableDictionary* output_ht;
 				if ([output_ht objectForKey: key] == nil)
 				{
 					[output_ht setObject: dummy forKey:key];
-					printf("%s\n", buf);
+					printf("%s", buf);
 				}
 			}
 		}
